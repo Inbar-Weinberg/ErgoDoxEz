@@ -4,8 +4,8 @@
 // git merge upstream
 
 /* code for compiling 
- * cd  /C/Users/Inbar/Desktop/Tools/qmk_firmware
- * make ergodox_ez:Math
+ cd  /C/Users/Inbar/Desktop/Tools/qmk_firmware
+ make ergodox_ez:Math
 */
 
 #include QMK_KEYBOARD_H
@@ -424,23 +424,23 @@ typedef struct { bool is_press_action; int state; }tap;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox_pretty(
-    LGUI_T(KC_ESCAPE), KC_Q,         KC_W,           TD(TD_copy),    KC_PASTE,       KC_UNDO,          KC_REDO,                                        XXX,                     XXX,    LCTL(KC_L),     LCTL(KC_E),         LCTL(KC_R),     LCTL(KC_F),  KC_AUDIO_VOL_UP,
-    KC_TAB,            KC_COMMA,     KC_DOT,         KC_E,           KC_R,           KC_T,             KC_HOME,                                        XXX,                     KC_Y,   KC_U,           KC_I,               KC_O,           XXX,         KC_AUDIO_VOL_DOWN,
-    TD_alttab,         KC_A,         KC_S,           KC_D,           KC_F,           KC_G,                                                                                      KC_H,   KC_J,           KC_K,               KC_L,           XXX,         TO(1),
-    KC_MS_WH_UP,       KC_Z,         KC_X,           KC_UP,          KC_V,           KC_B,             KC_END,                                         OSM(MOD_LCTL|MOD_LALT),  KC_N,   KC_M,           KC_P,               KC_C,           XXX,         KC_LANGUAGE,
-    KC_MS_WH_DOWN,     KC_LSHIFT,    KC_LEFT,        KC_DOWN,        KC_RIGHT,                                                                                                          KC_BSPACE,      KC_DELETE,          KC_LSHIFT,      XXX,         XXX,
-                                                                                                        PRINT_SCREEN,     PRINT_SCREEN2,     XXX,             TG(4),
-                                                                                                                          XXX,               XXX,
-                                                                                       LT(2,KC_SPACE),  LT(7,KC_ENTER),   KC_BSPACE,         OSM(MOD_LALT),   OSM(MOD_LCTL),      OSL(3)
+    LGUI_T(KC_ESCAPE), KC_Q,         KC_W,           TD(TD_copy),    KC_PASTE,       KC_UNDO,          KC_REDO,                                        XXX,                     LCTL(KC_S),     LCTL(KC_L),     LCTL(KC_E),         LCTL(KC_R),     LCTL(KC_F),  XXX,
+    KC_TAB,            KC_COMMA,     KC_DOT,         KC_E,           KC_R,           KC_T,             KC_HOME,                                        XXX,                     KC_Y,           KC_U,           KC_I,               KC_O,           XXX,         XXX,
+    TD_alttab,         KC_A,         KC_S,           KC_D,           KC_F,           KC_G,                                                                                      KC_H,           KC_J,           KC_K,               KC_L,           XXX,         TO(1),
+    KC_MS_WH_UP,       KC_Z,         KC_X,           KC_UP,          KC_V,           KC_B,             LT(7,KC_END),                                   OSM(MOD_LCTL|MOD_LALT),  KC_N,           KC_M,           KC_P,               KC_C,           XXX,         KC_LANGUAGE,
+    KC_MS_WH_DOWN,     KC_LSHIFT,    KC_LEFT,        KC_DOWN,        KC_RIGHT,                                                                                                                  KC_BSPACE,      KC_DELETE,          KC_LSHIFT,      XXX,         XXX,
+                                                                                                        PRINT_SCREEN,     PRINT_SCREEN2,     KC_AUDIO_VOL_UP,      TG(4),
+                                                                                                                          XXX,               KC_AUDIO_VOL_DOWN,
+                                                                                       LT(2,KC_SPACE),  LT(7,KC_ENTER),   KC_BSPACE,         OSM(MOD_LALT),        OSM(MOD_LCTL),      OSL(3)
   ),
 
   // Hebrew
   [1] = LAYOUT_ergodox_pretty(
-    ___,   ___,        ___,        ___,    ___,         ___,        ___,        ___,     ___,    ___,       ___,          ___,   ___,         ___,
-    ___,   KC_QUOTE,   KC_SLASH,   KC_E,   KC_R,        KC_Z,       ___,        ___,     XXX,    KC_K,      TD(TD_F),     XXX,   ___,         ___,
-    ___,   KC_A,       KC_V,       KC_T,   KC_C,        KC_G,                            KC_J,   TD(TD_N),  KC_U,         KC_H,  ___,         TO(0),
-    ___,   KC_D,       KC_S,       ___,    TD(TD_B),    TD(TD_M),   ___,        ___,     KC_Y,   TD(TD_P),  KC_COMMA,     KC_X,  ___,         ___,
-    ___,   ___,        ___,        ___,    ___,                                                  ___,       ___,          ___,   LCTLP(KC_S),  ___,
+    ___,   ___,        ___,        ___,    ___,         ___,        ___,        ___,     ___,    ___,       ___,          ___,   ___,    ___,
+    ___,   KC_QUOTE,   KC_SLASH,   KC_E,   KC_R,        KC_Z,       ___,        ___,     XXX,    KC_K,      TD(TD_F),     XXX,   ___,    ___,
+    ___,   KC_A,       KC_V,       KC_T,   KC_C,        KC_G,                            KC_J,   TD(TD_N),  KC_U,         KC_H,  ___,    TO(0),
+    ___,   KC_D,       KC_S,       ___,    TD(TD_B),    TD(TD_M),   ___,        ___,     KC_Y,   TD(TD_P),  KC_COMMA,     KC_X,  ___,    ___,
+    ___,   ___,        ___,        ___,    ___,                                                  ___,       ___,          ___,   ___,    ___,
                                                                    ___,  ___,   ___,  ___, 
                                                                          ___,   ___,
                                                              ___,  ___,  ___,   ___,  ___,  ___
@@ -472,14 +472,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ), 
 
   [7] = LAYOUT_ergodox_pretty(   
-  ___,        ___,       ___,      KC_EXLM,   ___,      ___,       ___,            ___,    ___,  ___,         ___,         ___,           ___,    ___,
-  ___,        ___,       ___,      KC_CIRC,   KC_DQUO,  KC_QUOTE,  KC_SCOLON,      ___,    ___,  ___,         KC_MS_UP,    ___,           ___,    ___,
-  KC_BSLASH,  KC_SLASH,  KC_MINUS, KC_EQUAL,  KC_PLUS,  KC_ASTR,                           ___,  KC_MS_LEFT,  KC_MS_DOWN,  KC_MS_RIGHT,   ___,    ___,
-  KC_GRAVE,   KC_PERC,   KC_TILD,  ___,       KC_LABK,  KC_RABK,   KC_COLN,        ___,    ___,  ___,         ___,         ___,           ___,    ___,
-  ___,        ___,       ___,      ___,       ___,                                               KC_MS_BTN2,  ___,         ___,           ___,    ___,
+  ___,        ___,       ___,      ___,   ___,  ___,     ___,        ___,    ___,         ___,            ___,          ___,         ___,    ___,
+  ___,        ___,       ___,      ___,   ___,  ___,     ___,        ___,    ___,         ___,       KC_MS_UP,          ___,         ___,    ___,
+  ___,        ___,       ___,      ___,   ___,  ___,                         ___,  KC_MS_LEFT,     KC_MS_DOWN,  KC_MS_RIGHT,         ___,    ___,
+  ___,        ___,       ___,      ___,   ___,  ___,     ___,        ___,    ___,         ___,            ___,          ___,         ___,    ___,
+  ___,        ___,       ___,      ___,   ___,                                     KC_MS_BTN2,            ___,          ___,         ___,    ___,
                                                                      ___, ___,     ___,  ___,
                                                                           ___,     ___,
-                                                               ___,  ___, ___,     ___,  ST_MACRO_8,  KC_MS_BTN1
+                                                               ___,  ___, ___,     ___,  ___,  KC_MS_BTN1
   ), 
 
 
@@ -489,13 +489,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Math Type Base
   [4] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, TD(TD_q),       TD(TD_w),   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,  KC_TRANSPARENT,                                   KC_TRANSPARENT,                  KC_TRANSPARENT, LCTL(LALT(KC_T)), LCTL(LALT(KC_G)),  LCTL(LALT(KC_B)),   KC_TRANSPARENT,    KC_TRANSPARENT,
-    KC_TRANSPARENT, TD(TD_comma),   TD(TD_dot), TD(TD_e),       TD(TD_r),       TD(Td_t),        KC_TRANSPARENT,                                   LCTL(LALT(KC_F5)),               TD(TD_y),       TD(TD_u),         TD(TD_i),          TD(TD_o),           KC_TRANSPARENT,    KC_TRANSPARENT,
+    KC_TRANSPARENT, TD(TD_comma),   TD(TD_dot), TD(TD_e),       TD(TD_r),       TD(TD_t),        KC_TRANSPARENT,                                   LCTL(LALT(KC_F5)),               TD(TD_y),       TD(TD_u),         TD(TD_i),          TD(TD_o),           KC_TRANSPARENT,    KC_TRANSPARENT,
     KC_TRANSPARENT, TD(TD_a),       TD(TD_s),   TD(TD_d),       TD(TD_f),       TD(TD_g),                                                                                           TD(TD_h),       TD(TD_j),         TD(TD_k),          TD(TD_l),           KC_TRANSPARENT,    KC_TRANSPARENT,
     KC_TRANSPARENT, TD(TD_z),       TD(TD_x),   KC_UP,          TD(TD_v),       TD(TD_b),        KC_TRANSPARENT,                                   OSM(MOD_LCTL|MOD_LALT),          TD(TD_n),       TD(TD_m),         TD(TD_p),          TD(TD_c),           KC_TRANSPARENT,    KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_LEFT,    KC_DOWN,        KC_RIGHT,                                                                                                                           KC_BSPACE,        KC_DELETE,         KC_LSHIFT,          KC_TRANSPARENT,    KC_TRANSPARENT,
                                                                                                  KC_TRANSPARENT, KC_TRANSPARENT,   KC_TRANSPARENT,  KC_TRANSPARENT, 
                                                                                                                  KC_TRANSPARENT,   KC_TRANSPARENT,
-                                                                             LT(5,KC_SPACE), LSFT_T(KC_ENTER),  KC_TRANSPARENT,    OSM(MOD_LALT),   OSM(MOD_LCTL),    OSL(6)
+                                                                             LT(5,KC_SPACE),     LT(7,KC_ENTER), KC_TRANSPARENT,    OSM(MOD_LALT),   OSM(MOD_LCTL),    OSL(6)
   ),
 
 // Math Type Numbers and math symboles
