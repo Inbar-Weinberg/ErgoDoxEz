@@ -4,7 +4,7 @@
 // git merge upstream
 
 /* code for compiling 
- cd  /C/Users/Inbar/Desktop/Tools/qmk_firmware
+cd  /C/Users/Inbar/Desktop/Tools/qmk_firmware
  make ergodox_ez:Math
 */
 
@@ -424,9 +424,9 @@ typedef struct { bool is_press_action; int state; }tap;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox_pretty(
-    LGUI_T(KC_ESCAPE), KC_Q,         KC_W,           TD(TD_copy),    KC_PASTE,       KC_UNDO,          KC_REDO,                                        XXX,                     LCTL(KC_S),     LCTL(KC_L),     LCTL(KC_E),         LCTL(KC_R),     LCTL(KC_F),  XXX,
+    LGUI_T(KC_ESCAPE), KC_Q,         KC_W,           KC_COPY,        KC_PASTE,       KC_UNDO,          KC_REDO,                                        XXX,                     LCTL(KC_S),     LCTL(KC_L),     LCTL(KC_E),         LCTL(KC_R),     LCTL(KC_F),  XXX,
     KC_TAB,            KC_COMMA,     KC_DOT,         KC_E,           KC_R,           KC_T,             KC_HOME,                                        XXX,                     KC_Y,           KC_U,           KC_I,               KC_O,           XXX,         XXX,
-    TD_alttab,         KC_A,         KC_S,           KC_D,           KC_F,           KC_G,                                                                                      KC_H,           KC_J,           KC_K,               KC_L,           XXX,         TO(1),
+    TD(TD_alttab),     KC_A,         KC_S,           KC_D,           KC_F,           KC_G,                                                                                      KC_H,           KC_J,           KC_K,               KC_L,           XXX,         TO(1),
     KC_MS_WH_UP,       KC_Z,         KC_X,           KC_UP,          KC_V,           KC_B,             LT(7,KC_END),                                   OSM(MOD_LCTL|MOD_LALT),  KC_N,           KC_M,           KC_P,               KC_C,           XXX,         KC_LANGUAGE,
     KC_MS_WH_DOWN,     KC_LSHIFT,    KC_LEFT,        KC_DOWN,        KC_RIGHT,                                                                                                                  KC_BSPACE,      KC_DELETE,          KC_LSHIFT,      XXX,         XXX,
                                                                                                         PRINT_SCREEN,     PRINT_SCREEN2,     KC_AUDIO_VOL_UP,      TG(4),
@@ -448,7 +448,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	  
 //Math and numbers
   [2] = LAYOUT_ergodox_pretty(
-    ___,        ___,       ___,      KC_EXLM,   ___,      ___,       ___,           ___,          ___,         LCTL(KC_I),  LCTL(KC_U),   LCTL(KC_B),   ___, ___,
+    ___,        ___,       ___,      KC_EXLM,   KC_CUT,   ___,       ___,           ___,          ___,         LCTL(KC_I),  LCTL(KC_U),   LCTL(KC_B),   ___, ___,
     ___,        ___,       ___,      KC_CIRC,   KC_DQUO,  KC_QUOTE,  KC_SCOLON,		  KC_NUM_SIGN,  ___,         KC_7,        KC_8,         KC_9,         ___, ___,
     KC_BSLASH,  KC_SLASH,  KC_MINUS, KC_EQUAL,  KC_PLUS,  KC_ASTR,                                ___,         KC_4,        KC_5,         KC_6,         ___, ___,
     KC_GRAVE,   KC_PERC,   KC_TILD,  ___,       KC_LABK,  KC_RABK,   KC_COLN,       KC_QUES,      ___,         KC_1,        KC_2,         KC_3,         ___, ___,
@@ -461,7 +461,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   
 //Brackets
   [3] = LAYOUT_ergodox_pretty(   
-  ___,        ___,       ___,      KC_EXLM,   ___,      ___,       ___,           ___,          ___,      LCTL(KC_I),   LCTL(KC_U),   LCTL(KC_B),    ___, ___,
+  ___,        ___,       ___,      KC_EXLM,   KC_CUT,   ___,       ___,           ___,          ___,      LCTL(KC_I),   LCTL(KC_U),   LCTL(KC_B),    ___, ___,
   ___,        ___,       ___,      KC_CIRC,   KC_DQUO,  KC_QUOTE,  KC_SCOLON,     KC_NUM_SIGN,  KC_AMPR,  KC_LBRACKET,  KC_RBRACKET,  KC_DLR,        ___, ___,
   KC_BSLASH,  KC_SLASH,  KC_MINUS, KC_EQUAL,  KC_PLUS,  KC_ASTR,                                KC_PIPE,  KC_LPRN,      KC_RPRN,      KC_UNDS,       ___, ___,
   KC_GRAVE,   KC_PERC,   KC_TILD,  ___,       KC_LABK,  KC_RABK,   KC_COLN,       KC_QUES,      KC_AT,    KC_LCBR,      KC_RCBR,      ___,           ___, ___,
@@ -501,7 +501,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Math Type Numbers and math symboles
 // Tap dance for Symbols, hold for ctrl + symbol, double for alt + symbol
   [5] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,   TD(TD_EXLM),       KC_TRANSPARENT,    KC_TRANSPARENT,    KC_TRANSPARENT,                                 KC_TRANSPARENT,              KC_TRANSPARENT,  KC_TRANSPARENT,  KC_TRANSPARENT,  KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,   TD(TD_EXLM),       KC_CUT,            KC_TRANSPARENT,    KC_TRANSPARENT,                                 KC_TRANSPARENT,              KC_TRANSPARENT,  KC_TRANSPARENT,  KC_TRANSPARENT,  KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,   TD(TD_CIRC),       TD(TD_DQUO),       TD(TD_QUOTE),      TD(TD_SCOLON),                                  KC_NUM_SIGN,                 KC_I,            TD(TD_n7),       TD(TD_n8),       TD(TD_n9),      KC_TRANSPARENT, KC_TRANSPARENT,
     TD(TD_BSLASH),  TD(TD_SLASH),       TD(TD_MINUS),     TD(TD_EQUAL2),     TD(TD_PLUS),       TD(TD_ASTR),                                                                                    Pi_Macro_Math,   TD(TD_n4),       TD(TD_n5),       TD(TD_n6),      KC_TRANSPARENT, KC_TRANSPARENT,
     KC_GRAVE,       TD(TD_PERC),        TD(TD_TILD),      KC_TRANSPARENT,    TD(TD_LABK),       TD(TD_RABK),       TD(TD_COLON),                                   KC_QUES,                     Inf_Macro_Math,  TD(TD_n1),       TD(TD_n2),       TD(TD_n3),      KC_TRANSPARENT, KC_TRANSPARENT,
@@ -515,7 +515,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Tap Dance for Backets basics advanced Math Type
 // Hold for ctrl + symbol, double for alt + symbol
   [6] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,   TD(TD_EXLM),       KC_TRANSPARENT,    KC_TRANSPARENT,    KC_TRANSPARENT,                               KC_TRANSPARENT,            KC_TRANSPARENT,   KC_TRANSPARENT,   KC_TRANSPARENT,   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,   TD(TD_EXLM),       KC_CUT,            KC_TRANSPARENT,    KC_TRANSPARENT,                               KC_TRANSPARENT,            KC_TRANSPARENT,   KC_TRANSPARENT,   KC_TRANSPARENT,   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,   TD(TD_CIRC),       TD(TD_DQUO),       TD(TD_QUOTE),      TD(TD_SCOLON),                                KC_NUM_SIGN,               KC_AMPR,          TD(TD_LBRACKET),  TD(TD_RBRACKET),  KC_DLR,         KC_TRANSPARENT, KC_TRANSPARENT,
     TD(TD_BSLASH),  TD(TD_SLASH),       TD(TD_MINUS),     TD(TD_EQUAL2),     TD(TD_PLUS),       TD(TD_ASTR),                                                                                TD(TD_PIPE),      TD(TD_LPRN),      TD(TD_RPRN),      TD(TD_UNDS),    KC_TRANSPARENT, KC_TRANSPARENT,
     KC_GRAVE,       TD(TD_PERC),        TD(TD_TILD),      KC_TRANSPARENT,    TD(TD_LABK),       TD(TD_RABK),       TD(TD_COLON),                                 KC_QUES,                   KC_AT,            TD(TD_LCBR),      TD(TD_RCBR),      KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
